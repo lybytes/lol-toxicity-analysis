@@ -1,60 +1,37 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/bZ640Svy)
-# Projects
+# Overview
 
-For your project, you need to form a team of 3 students (no other team sizes will be considered). You will *choose your own research question* and find appropriate datasets to answer your question. You will create a Python notebook that contains an exploratory data analysis of a chosen dataset. The notebook is expected to tell a story and the analysis should be clearly presented. You may choose one of the datasets from the list below, or from other sources. 
+This project was completed as part of the ST445: Managing and Visualising Data course at the London School of Economics and Political Science (LSE). It was submitted as a group project in the 2024/25 academic year.
 
-Your notebook needs to demonstrate knowledge of applying the methods learned in the course, *covering both manipulating and visualising data*.
+# Problem Statement
 
-### Group member contribution
-Group members must detail their individual contributions at the conclusion of the notebook. You are to quantify your contributions in the form of a percentage. The formula that will be used to calculate the final grade will be: grade = min(x, x * individual_contribution / 0.33) assuming a group of 3 members. As an example, if a project is marker 70% and the contributions are 40%, 35%, 25% then the grades will be min(70, 70 * 0.4 / 0.33) = 70, min(70, 70 * 0.35 / 0.33) = 70 and min(70, 70 * 0.25 / 0.33) = 53, accordingly. This is a formula that was used for other group project based work in the Department and is seen as promoting equal contribution to the project.
+Online toxicity is a pervasive issue in competitive gaming. League of Legends, one of the world's most popular multiplayer online battle arena (MOBA) games with over 150 million registered players, has long struggled with toxic player behaviour — including harassment, hate speech, and deliberate sabotage of teammates. Understanding the patterns behind this behaviour is valuable both for game developers seeking to improve player experience and for broader research into online community dynamics.
+This project investigates toxicity in League of Legends by analysing player behaviour data retrieved via the Riot Games API, combining it with natural language processing techniques to detect and understand patterns of toxic communication across different player roles, ranks, and game outcomes.
 
-Should specific contributions not be documented, I will proceed under the assumption that all members contributed equally to the project.
+# Key Features
 
-Analysis of different datasets may require different amount of effort, which will be taken into account when grading submitted solutions.
+Data collection via the Riot Games API
+Champion and player position analysis
+Toxicity classification using NLP models from HuggingFace
+Interactive visualisations including Sankey diagrams and choropleth maps
+Clustering analysis to identify behavioural archetypes
 
-## Important dates
+# Requirements
+Before running this project, you will need to obtain two API credentials:
+1. Riot Games API Key
+Register at the Riot Developer Portal
+Generate an API key and paste it into ST445_Project_Riot API Key.txt
 
-* **Groups formed by**: Tuesday, 9 December 2025
-* **Project submission date**: midday on Friday, 30 January 2026
+2. HuggingFace Token
+Create an account at HuggingFace
+Generate an access token under Settings → Access Tokens
+Paste it into ST445_Project_hf token.txt
 
+# Data
+The project uses a combination of data sources:
 
-## Criteria of evaluation
+Riot API — live player and match data
+OP.GG — champion position data
+Pre-processed datasets included in the repository (final_cleaned_data_no_labels.csv, section3_*.csv)
 
-1. __Data manipulation__: use of different techniques for acquiring, cleaning, reshaping and querying data.  
-2. __Data visualisation__: use of appropriate data visualisation methods for the underlying goals.
-3. __Presentation__: overall organisation of the notebook, story telling, quality of presentation, use of both textual and graphical components, overall aesthetics and neatness, use of most efficient communication means, finding a good balance between using different methods and being concise and correct.
-
-Please refer to the <a href="https://docs.google.com/spreadsheets/d/1DXmMzShyyDaemXn_kbwQYEP_Zw0Ko80wJqWpq8UjPu8/edit?usp=sharing">__Marking Rubric__</a> for details.
-
-__Structure__ of notebook: The notebook must start by summarising the goals/research questions of the study and providing some background about the dataset and how this dataset can be used to address the asserted goals. It should then proceed through importing, cleaning and preparing the data for analysis, followed by an exploratory data analysis using data visualisation and other means. The notebook may use different methods for managing and visualising data, but try to find a balance between being exhaustive and efficient in using those that best serve your underlying goals. The notebook may use different data analysis methods, from basic exploratory data analysis using statistical and other plots to those using special methods such as dimensionality reduction, graph visualisation, and other methods. Keep in mind that advanced modelling of data beyond the methodologies described in this course are not required or expected. The notebook must conclude with a section summarising the main findings of the analysis.
-
-__Length of report__: While there are no strict limits on report length, the report should be concise and focused on clarity rather than volume.
-
-
-## Examples of datasets
-
-* LSE library [data subscriptions](https://www.lse.ac.uk/library/using-the-library/library-resources-guide/databases)
-* NHS Health [datasets](https://digital.nhs.uk/data-and-information/data-collections-and-data-sets/data-sets)
-* UK policing [datasets](https://data.police.uk/data/)
-* London [datastore](https://data.london.gov.uk/)
-* Nasdaq Data [Link](https://data.nasdaq.com/institutional-investors)
-* UK government data [data.gov.uk](https://data.gov.uk/)
-* [Urban Big Data Centre](http://ubdc.ac.uk/) data collection
-* [ESRC Business and Local Government Data Research Centre](http://www.blgdataresearch.org/) data collection
-* European Union Open Data Portal [here](https://data.europa.eu/euodp/en/data/)
-* [Manifesto](https://manifesto-project.wzb.eu/) - human-annotated political texts
-* DBLP bibliography [dataset](http://dblp.uni-trier.de/xml/)
-* New York Stock Exchange [dataset](https://www.kaggle.com/dgawlik/nyse)
-* [SNAP](https://snap.stanford.edu/data/index.html) - Stanford Large Network Data Collection
-* [Basketball Reference](https://www.basketball-reference.com/)
-* [StackExchange Data Dump](https://archive.org/details/stackexchange)
-* MovieLens recommendations [dataset](https://grouplens.org/datasets/movielens/)
-* Facebook: [The Graph API](https://developers.facebook.com/docs/graph-api/?locale=en_US)
-* [AWS Public Datasets](https://aws.amazon.com/public-datasets/)
-* Google BigQuery [public datasets](https://cloud.google.com/bigquery/public-data/)
-* Google [Knowledge Graph](https://developers.google.com/knowledge-graph/)
-* Yahoo! [datasets](https://webscope.sandbox.yahoo.com/)
-* [Yago](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago/#c10444) knowledge graph
-
-## Some past examples
-See Examples folder for details.
+# Disclaimer
+This project is purely academic. All data was collected in accordance with the Riot Games API Terms of Service. No personal player data is stored or distributed.
