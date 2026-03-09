@@ -1,6 +1,6 @@
 # Overview
 
-This project was completed as part of the ST445: Managing and Visualising Data course at the London School of Economics and Political Science (LSE). It was submitted as a group project in the 2024/25 academic year.
+This project was completed as part of the ST445: Managing and Visualising Data course at the London School of Economics and Political Science (LSE). It was submitted as a group project in the 2025/27 academic year.
 
 # Problem Statement
 
