@@ -2,7 +2,7 @@
 
 > Identifying and predicting toxic player behaviour in high-ELO ranked matches using in-game performance data, deviation-based proxy labelling, and machine learning.
 
-*Completed as part of ST445 (Managing and Visualising Data) at the London School of Economics. Collaborative project with [lybytes](https://github.com/lybytes) and [zoey-yhk](https://github.com/zoey-yhk).*
+*Completed as part of ST445 (Managing and Visualising Data) at the London School of Economics. Collaborative project with [lybytes](https://github.com/yh-brain) and [zoey-yhk](https://github.com/zoey-yhk).*
 
 ---
 
