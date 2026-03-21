@@ -10,7 +10,7 @@
 
 Toxic players — those who intentionally feed, abandon objectives, or systematically underperform — are among the most persistent threats to player retention in online multiplayer games. Yet toxicity is notoriously hard to study: players never self-identify as toxic, chat logs are unavailable via public APIs, and there is no ground-truth labelling in any released dataset.
 
-This project sidesteps that problem by asking a different question: **can we reconstruct toxicity as a signal from behavioural traces alone?** The answer, it turns out, is yes — but only with the right methodology.
+This project sidesteps that problem by asking a different question: **can we reconstruct toxicity as a signal from behavioural traces alone?** 
 
 ---
 
@@ -18,7 +18,7 @@ This project sidesteps that problem by asking a different question: **can we rec
 
 1. What behavioural patterns distinguish toxic players from normal players?
 2. Can in-game decision-making metrics predict toxic behaviour with high accuracy?
-3. Do toxic players form natural, separable groupings in the feature space — or is toxicity better understood as an anomalous deviation?
+3. Do toxic players form natural, separable groupings in the feature space or is toxicity better understood as an anomalous deviation?
 
 ---
 
@@ -65,13 +65,11 @@ We treated this as both an unsupervised discovery problem and a supervised class
 - **96% recall** on toxic players
 - **66% precision** on toxic players
 
-The precision-recall tradeoff here is by design: in a detection context, missing a toxic player (false negative) is more costly than a false positive, so the model is calibrated to maximise recall. The 66× improvement in precision over the clustering baseline (4%) confirms that supervised learning is essential for this problem.
-
 ---
 
 ## Key Findings
 
-- **Toxicity is multidimensional.** No single metric reliably identifies a toxic player. It is the co-occurrence of extreme deviations across multiple behavioural dimensions — deaths, KDA, vision, team coordination — that constitutes a toxicity signal.
+- **Toxicity is multidimensional.** No single metric reliably identifies a toxic player. It is the co-occurrence of extreme deviations across multiple behavioural dimensions (deaths, KDA, vision, team coordination) that constitutes a toxicity signal.
 
 - **Deaths and KDA are the strongest individual predictors**, but their predictive power increases substantially when combined with resource and vision metrics.
 
@@ -79,7 +77,6 @@ The precision-recall tradeoff here is by design: in a detection context, missing
 
 - **Toxic players do not cluster.** This is arguably the most theoretically interesting finding: toxicity is better characterised as a learnable anomaly boundary than a distinct behavioural archetype. Unsupervised methods are insufficient; supervised learning is necessary.
 
-- **The proxy label scheme is robust.** The SVM's strong generalisation performance provides indirect validation that the labelling criteria capture a real and learnable signal, despite the absence of ground-truth annotations.
 
 ---
 
